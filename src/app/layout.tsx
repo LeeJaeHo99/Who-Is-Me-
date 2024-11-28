@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/styles/reset.css";
+import "@/styles/globals.css";
+import "@/styles/font.css";
+
+import Header from '@/components/main/Header';
 
 export const metadata: Metadata = {
     title: "Who Is Me?",
@@ -13,7 +17,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ko">
-            <body>{children}</body>
+            <body>
+                <Header/>
+                {children}
+            </body>
         </html>
     );
 }
