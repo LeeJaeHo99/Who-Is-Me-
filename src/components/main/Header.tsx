@@ -1,7 +1,13 @@
-export default function Header(){
-    return(
-        <header className="w-full h-20 bg-primary70">
-            <div className="inner justify-center" style={{fontFamily: 'DoHyeon'}}>Who Is Me?</div>
+import Link from "next/link";
+
+export default function Header() {
+    return (
+        <header className="flex items-center justify-between w-full h-20">
+            <div className="inner justify-center">
+                <h1 className="text-3xl text-primary tracking-wider">
+                    <Link href="/">후이즈미?</Link>
+                </h1>
+            </div>
         </header>
     );
 }
